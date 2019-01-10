@@ -1,0 +1,10 @@
+% for (index, host) in enumerate(bk_host_list):
+<tr>
+    <td class="ip" data-ip="${host.get('bk_host_innerip')}" cloud-ip="${host.get('bk_inst_id')}">${host.get('bk_host_innerip')}</td>
+    <td>${host.get('bk_os_name')}</td>
+    <td>${host.get('bk_host_name')}</td>
+    <td >${host.get('bk_cloud_name')}</td>
+</tr>
+% endfor
+
+

@@ -72,8 +72,8 @@ def render_mako_context(request, template_name, dictionary={}):
     context_instance = get_context_processors_content(request)
     # ===========================================================================
     # # you can add csrf_token here
-    # from django.core.context_processors import csrf
-    # context_instance['csrf_token'] = csrf(request)['csrf_token']
+    from django.core.context_processors import csrf
+    context_instance['csrf_token'] = csrf(request)['csrf_token']
     # ===========================================================================
     # render
     return render_mako(template_name, dictionary=dictionary, context_instance=context_instance)

@@ -1,0 +1,5 @@
+bk_biz_list = get_app_by_user(request.COOKIES['bk_token'])
+    for x in bk_biz_list:
+        if x.get("app_name") == u'\u8d44\u6e90\u6c60' or x.get("app_name") == 'Resource pool':
+            bk_biz_list.remove(x)
+            break
