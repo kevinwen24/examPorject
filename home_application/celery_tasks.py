@@ -38,11 +38,10 @@ def async_task(bk_biz_id, biz_name, account, ip_string, job_id, ip_list, script_
 
     res = client.job.execute_job({
         'bk_biz_id': bk_biz_id,
-        'ip_list': ip_list,
         'bk_job_id': job_id,
-        'global_vars': {
+        'global_vars': [{
             "ip_list": ip_list
-        }
+        }]
     })
     task_id = res.get("data").get("job_instance_id")
 
